@@ -1,5 +1,5 @@
 /*!
- * @zenfs/core — https://npmjs.com/package/@zenfs/core
+ * @lvcabral/zenfs — https://npmjs.com/package/@lvcabral/zenfs
  * Copyright © James Prevett and other ZenFS contributors.
  * SPDX-License-Identifier: LGPL-3.0-or-later
  */

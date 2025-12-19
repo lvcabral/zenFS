@@ -50,7 +50,7 @@ Note the actual implementation's write is slightly more complicated since it add
 Finally, if you'd like to use your custom device with the file system:
 
 ```ts
-import { addDevice, fs } from '@zenfs/core';
+import { addDevice, fs } from '@lvcabral/zenfs';
 
 addDevice(customNullDevice);
 

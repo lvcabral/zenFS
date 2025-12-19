@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { InMemoryStore, Mutexed, StoreFS } from '@zenfs/core';
+import { InMemoryStore, Mutexed, StoreFS } from '@lvcabral/zenfs';
 import assert from 'node:assert/strict';
 import { suite, test } from 'node:test';
 import { wait } from 'utilium';

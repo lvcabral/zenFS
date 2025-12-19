@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { sync, type Dirent } from '@zenfs/core';
+import { sync, type Dirent } from '@lvcabral/zenfs';
 import assert, { rejects } from 'node:assert/strict';
 import { suite, test } from 'node:test';
 import { fs } from '../common.js';

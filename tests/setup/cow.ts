@@ -1,4 +1,4 @@
-import { configureSingle, CopyOnWrite, fs, InMemory, resolveMountConfig } from '@zenfs/core';
+import { configureSingle, CopyOnWrite, fs, InMemory, resolveMountConfig } from '@lvcabral/zenfs';
 import { copySync, data } from '../setup.js';
 
 fs.umount('/');

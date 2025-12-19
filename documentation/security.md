@@ -18,7 +18,7 @@ The VFS is responsible for checking file permissions before executing operations
 `chroot` in ZenFS is implemented as a shortcut for creating a new execution context or modifying an existing one. The effective uid or gid of the current set of credentials object _must_ be 0, which ensures untrusted code given a `chroot`ed environment cannot escape.
 
 ```ts
-import { fs } from '@zenfs/core';
+import { fs } from '@lvcabral/zenfs';
 
 const ctx = fs.chroot('/sandbox');
 ctx.writeFileSync('/file.txt', 'Restricted');
@@ -52,7 +52,7 @@ Contexts (`FSContext`/`BoundContext`) in ZenFS define isolated execution environ
 **Example: Using a Context**
 
 ```ts
-import { bindContext, fs } from '@zenfs/core';
+import { bindContext, fs } from '@lvcabral/zenfs';
 
 const ctx = bindContext({ root: '/secure', uid: 333, gid: 333 });
 

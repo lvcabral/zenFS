@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { configure, configureSingle, configureSingleSync, configureSync, fs, InMemory, mounts, SingleBuffer, type Backend } from '@zenfs/core';
+import { configure, configureSingle, configureSingleSync, configureSync, fs, InMemory, mounts, SingleBuffer, type Backend } from '@lvcabral/zenfs';
 import assert from 'node:assert/strict';
 import { suite, test } from 'node:test';
 

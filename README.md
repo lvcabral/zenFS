@@ -38,7 +38,7 @@ For more information, see the [docs](https://zenfs.dev/core).
 ## Installing
 
 ```sh
-npm install @zenfs/core
+npm install @lvcabral/zenfs
 ```
 
 If you're using ZenFS, especially for big projects, please consider supporting the project.
@@ -48,7 +48,7 @@ Your financial support would go a long way toward improving ZenFS and its commun
 ## Usage
 
 ```js
-import { fs } from '@zenfs/core'; // You can also use the default export
+import { fs } from '@lvcabral/zenfs'; // You can also use the default export
 
 fs.writeFileSync('/test.txt', 'You can do this anywhere, including browsers!');
 
@@ -67,7 +67,7 @@ You can use multiple backends by passing an object to `configure` which maps pat
 The following example mounts a zip file to `/zip`, in-memory storage to `/tmp`, and IndexedDB to `/home`. Note that `/` has the default in-memory backend.
 
 ```js
-import { configure, InMemory } from '@zenfs/core';
+import { configure, InMemory } from '@lvcabral/zenfs';
 import { IndexedDB } from '@zenfs/dom';
 import { Zip } from '@zenfs/archives';
 
@@ -94,7 +94,7 @@ Note that while you aren't required to use absolute paths for the keys of `mount
 Here is an example that mounts the `WebStorage` backend from `@zenfs/dom` on `/`:
 
 ```js
-import { configureSingle, fs } from '@zenfs/core';
+import { configureSingle, fs } from '@lvcabral/zenfs';
 import { WebStorage } from '@zenfs/dom';
 
 await configureSingle({ backend: WebStorage });
@@ -116,7 +116,7 @@ This fork bundles the synchronous configuration helpers that let you mount ZenFS
 - `resolveMountConfigSync()` instantiates a backend immediately, and `ensureReadySync()` verifies that a `FileSystem` is safe to use from synchronous code.
 
 ```ts
-import { configureSync, configureSingleSync, InMemory } from '@zenfs/core';
+import { configureSync, configureSingleSync, InMemory } from '@lvcabral/zenfs';
 
 configureSync({
 	mounts: {
@@ -135,8 +135,8 @@ Only backends that fully initialize synchronously (for example `InMemory`, `Sing
 The FS promises API is exposed as `promises`.
 
 ```js
-import { configureSingle } from '@zenfs/core';
-import { exists, writeFile } from '@zenfs/core/promises';
+import { configureSingle } from '@lvcabral/zenfs';
+import { exists, writeFile } from '@lvcabral/zenfs/promises';
 import { IndexedDB } from '@zenfs/dom';
 
 await configureSingle({ backend: IndexedDB });
@@ -150,9 +150,9 @@ if (!exists) {
 > [!NOTE]
 > You can import the promises API using:
 >
-> 1. Exports from `@zenfs/core/promises`
-> 2. The `promises` export from `@zenfs/core`
-> 3. `fs.promises` on the exported `fs` from `@zenfs/core`.
+> 1. Exports from `@lvcabral/zenfs/promises`
+> 2. The `promises` export from `@lvcabral/zenfs`
+> 3. `fs.promises` on the exported `fs` from `@lvcabral/zenfs`.
 
 #### Mounting and unmounting, creating backends
 
@@ -161,7 +161,7 @@ If you would like to create backends without configure (e.g. to do something dyn
 You can then mount and unmount the backend instance by using `mount` and `umount`.
 
 ```js
-import { configure, resolveMountConfig, InMemory } from '@zenfs/core';
+import { configure, resolveMountConfig, InMemory } from '@lvcabral/zenfs';
 import { IndexedDB } from '@zenfs/dom';
 import { Zip } from '@zenfs/archives';
 
@@ -192,7 +192,7 @@ ZenFS includes support for device files. These are designed to follow Linux's de
 
 ## `node:*` emulation
 
-ZenFS also includes emulation of some other `node:` modules for various reasons, importable from `@zenfs/core/<name>`:
+ZenFS also includes emulation of some other `node:` modules for various reasons, importable from `@lvcabral/zenfs/<name>`:
 
 - `node:path`
 - `node:readline`
@@ -200,7 +200,7 @@ ZenFS also includes emulation of some other `node:` modules for various reasons,
 For example:
 
 ```ts
-import * as path from '@zenfs/core/path';
+import * as path from '@lvcabral/zenfs/path';
 ```
 
 ## Bundling

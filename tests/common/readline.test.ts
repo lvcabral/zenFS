@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { createInterface, Interface } from '@zenfs/core/readline';
+import { createInterface, Interface } from '@lvcabral/zenfs/readline';
 import assert from 'node:assert/strict';
 import { PassThrough } from 'node:stream';
 import { suite, test } from 'node:test';

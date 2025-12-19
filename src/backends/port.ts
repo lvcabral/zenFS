@@ -172,7 +172,7 @@ export interface Port extends _Port {}
  * Main:
  *
  * ```ts
- * import { configure } from '@zenfs/core';
+ * import { configure } from '@lvcabral/zenfs';
  * import { Port } from '@zenfs/port';
  * import { Worker } from 'node:worker_threads';
  *
@@ -191,7 +191,7 @@ export interface Port extends _Port {}
  * Worker:
  *
  * ```ts
- * import { InMemory, resolveRemoteMount, attachFS } from '@zenfs/core';
+ * import { InMemory, resolveRemoteMount, attachFS } from '@lvcabral/zenfs';
  * import { parentPort } from 'node:worker_threads';
  *
  * await resolveRemoteMount(parentPort, { backend: InMemory, name: 'tmp' });
@@ -202,7 +202,7 @@ export interface Port extends _Port {}
  * #### Using with multiple ports on the same thread
  *
  * ```ts
- * import { InMemory, fs, resolveMountConfig, resolveRemoteMount, Port } from '@zenfs/core';
+ * import { InMemory, fs, resolveMountConfig, resolveRemoteMount, Port } from '@lvcabral/zenfs';
  * import { MessageChannel } from 'node:worker_threads';
  *
  * const { port1: localPort, port2: remotePort } = new MessageChannel();

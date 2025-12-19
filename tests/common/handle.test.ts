@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { constants, promises } from '@zenfs/core';
+import { constants, promises } from '@lvcabral/zenfs';
 import assert from 'node:assert/strict';
 import type { FileHandle } from 'node:fs/promises';
 import { after, suite, test } from 'node:test';

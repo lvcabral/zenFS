@@ -4,8 +4,8 @@ type: Bug
 body:
     - type: input
       attributes:
-          label: '@zenfs/core version'
-          description: The latest version of @zenfs/core the issue occurs on. You can also put a commit hash here for bugs with unreleased code.
+          label: '@lvcabral/zenfs version'
+          description: The latest version of @lvcabral/zenfs the issue occurs on. You can also put a commit hash here for bugs with unreleased code.
           placeholder: 1.2.3
       validations:
           required: true

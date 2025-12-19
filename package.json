@@ -1,6 +1,6 @@
 {
 	"name": "@lvcabral/zenfs",
-	"version": "2.5.0",
+	"version": "2.5.1",
 	"description": "A filesystem, anywhere",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -52,8 +52,7 @@
 		"./types/*": "./types/*"
 	},
 	"publishConfig": {
-		"access": "public",
-		"provenance": true
+		"access": "public"
 	},
 	"scripts": {
 		"format": "prettier --write .",

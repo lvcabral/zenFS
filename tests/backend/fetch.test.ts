@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { Fetch, configureSingle, fs, mounts, type FetchFS } from '@zenfs/core';
+import { Fetch, configureSingle, fs, mounts, type FetchFS } from '@lvcabral/zenfs';
 import assert from 'node:assert/strict';
 import { join } from 'node:path';
 import { after, suite, test } from 'node:test';

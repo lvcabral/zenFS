@@ -1,4 +1,4 @@
-import { InMemory, Port, configureSingle, fs, resolveMountConfig, resolveRemoteMount, sync } from '@zenfs/core';
+import { InMemory, Port, configureSingle, fs, resolveMountConfig, resolveRemoteMount, sync } from '@lvcabral/zenfs';
 import { after, afterEach } from 'node:test';
 import { MessageChannel } from 'node:worker_threads';
 import { copySync, data } from '../setup.js';

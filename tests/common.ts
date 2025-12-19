@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { fs as defaultFS } from '@zenfs/core';
-import type { NodeFS } from '@zenfs/core/node/types.js';
+import { fs as defaultFS } from '@lvcabral/zenfs';
+import type { NodeFS } from '@lvcabral/zenfs/node/types.js';
 import { join, resolve } from 'node:path';
 import { styleText } from 'node:util';
 import { setupLogs } from './logs.js';

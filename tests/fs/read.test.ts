@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { sync } from '@zenfs/core';
+import { sync } from '@lvcabral/zenfs';
 import { Buffer } from 'buffer';
 import assert from 'node:assert/strict';
 import type { OpenMode, PathLike } from 'node:fs';

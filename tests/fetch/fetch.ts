@@ -1,4 +1,4 @@
-import { configure, Fetch } from '@zenfs/core';
+import { configure, Fetch } from '@lvcabral/zenfs';
 import { log } from 'kerium';
 import { baseUrl } from './config.js';
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { Inode } from '@zenfs/core';
+import { Inode } from '@lvcabral/zenfs';
 import assert from 'node:assert';
 import { suite, test } from 'node:test';
 

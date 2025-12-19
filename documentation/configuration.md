@@ -13,7 +13,7 @@ The `configure` function initializes ZenFS with the provided configuration objec
 Example Usage:
 
 ```ts
-import { configure, InMemory } from '@zenfs/core';
+import { configure, InMemory } from '@lvcabral/zenfs';
 
 await configure({
 	mounts: {
@@ -25,7 +25,7 @@ await configure({
 If your application runs entirely synchronously (for example, during early Node.js bootstrap), you can use `configureSync` instead. It follows the same shape as `configure`, but it throws if any backend requires asynchronous initialization.
 
 ```ts
-import { configureSync, InMemory } from '@zenfs/core';
+import { configureSync, InMemory } from '@lvcabral/zenfs';
 
 configureSync({
 	mounts: {
@@ -45,7 +45,7 @@ Mounting file systems in ZenFS is handled dynamically. When a mount configuratio
 `resolveMountConfig` parses the provided mount configuration, validates the backend and its options, and instantiates the appropriate `FileSystem` for the given backend. It then returns the instance after it is ready. For example:
 
 ```ts
-import { resolveMountConfig, InMemory, mount } from '@zenfs/core';
+import { resolveMountConfig, InMemory, mount } from '@lvcabral/zenfs';
 
 const tmpfs = await resolveMountConfig({
 	backend: InMemory,

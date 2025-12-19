@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import { configure, fs, mounts } from '@zenfs/core';
+import { configure, fs, mounts } from '@lvcabral/zenfs';
 import assert from 'node:assert/strict';
 import { suite, test } from 'node:test';
 

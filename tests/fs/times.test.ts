@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
-import type { StatsLike } from '@zenfs/core';
+import type { StatsLike } from '@lvcabral/zenfs';
 import { Exception } from 'kerium';
 import assert from 'node:assert/strict';
 import { suite, test } from 'node:test';

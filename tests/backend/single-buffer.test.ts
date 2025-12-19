@@ -3,7 +3,7 @@ import assert from 'node:assert';
 import { randomBytes } from 'node:crypto';
 import { suite, test } from 'node:test';
 import { Worker } from 'worker_threads';
-import { fs, mount, resolveMountConfig, SingleBuffer, vfs } from '@zenfs/core';
+import { fs, mount, resolveMountConfig, SingleBuffer, vfs } from '@lvcabral/zenfs';
 import { setupLogs } from '../logs.js';
 
 setupLogs();
