@@ -4,6 +4,10 @@ ZenFS is a cross-platform library that emulates the [Node.js filesystem API](htt
 It works using a system of backends, which are used by ZenFS to store and retrieve data.
 ZenFS can also integrate with other tools.
 
+## Fork Information
+
+This is a fork of the original [ZenFS](https://zenfs.dev/core) project that adds synchronous configuration capabilities, allowing users to set up ZenFS backends in environments that do not support asynchronous operations during initialization. See the [ZenFS Sync Configuration Enhancements](./documentation/sync-config.md) document for more details.
+
 ## Backends
 
 ZenFS is modular and easily extended. The core includes some built-in backends:
@@ -103,6 +107,29 @@ const contents = fs.readFileSync('/test.txt', 'utf-8');
 console.log(contents);
 ```
 
+#### Synchronous configuration (fork addition)
+
+This fork bundles the synchronous configuration helpers that let you mount ZenFS backends without awaiting any promises—handy for embedders, synchronous bootstrap code, or environments that prohibit async/await during startup.
+
+- `configureSync()` mirrors `configure()` but throws if a backend performs asynchronous work while creating or warming up.
+- `configureSingleSync()` replaces the root mount ( `/` ) synchronously.
+- `resolveMountConfigSync()` instantiates a backend immediately, and `ensureReadySync()` verifies that a `FileSystem` is safe to use from synchronous code.
+
+```ts
+import { configureSync, configureSingleSync, InMemory } from '@zenfs/core';
+
+configureSync({
+	mounts: {
+		'/tmp': { backend: InMemory, label: 'sync-mount' },
+	},
+});
+
+// later on, swap the root mount synchronously
+configureSingleSync({ backend: InMemory, label: 'fresh-root' });
+```
+
+Only backends that fully initialize synchronously (for example `InMemory`, `SingleBuffer`, or a `CopyOnWrite` pairing of synchronous stores) can be used with these helpers. If a backend internally needs to await I/O it should continue to be configured through the async APIs above.
+
 #### FS Promises
 
 The FS promises API is exposed as `promises`.
@@ -189,4 +216,6 @@ A huge thank you to [deco.cx](https://github.com/deco-cx) for sponsoring ZenFS a
 
 ## Contact and Support
 
-You can reach out [on Discord](https://zenfs.dev/discord) or by emailing jp@zenfs.dev
+You can reach out [on Discord](https://zenfs.dev/discord) or by emailing [jp@zenfs.dev](mailto:jp@zenfs.dev).
+
+For issues related to this fork, you can open an issue on [GitHub](https://github.com/lvcabral/zenfs/issues) or email [Marcelo Lv Cabral](mailto:marcelo@lvcabral.com).

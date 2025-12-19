@@ -1,11 +1,7 @@
 {
-	"name": "@zenfs/core",
-	"version": "2.4.4",
+	"name": "@lvcabral/zenfs",
+	"version": "2.5.0",
 	"description": "A filesystem, anywhere",
-	"funding": {
-		"type": "individual",
-		"url": "https://github.com/sponsors/james-pre"
-	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"keywords": [
@@ -29,15 +25,16 @@
 	"homepage": "https://zenfs.dev/core",
 	"author": "James Prevett <jp@jamespre.dev> (https://jamespre.dev)",
 	"contributors": [
-		"John Vilk <jvilk@cs.umass.edu>"
+		"John Vilk <jvilk@cs.umass.edu>",
+		"Marcelo Lv Cabral <marcelo@lvcabral.com>"
 	],
 	"license": "LGPL-3.0-or-later",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/zen-fs/core.git"
+		"url": "git+https://github.com/lvcabral/zenfs.git"
 	},
 	"bugs": {
-		"url": "https://github.com/zen-fs/core/issues"
+		"url": "https://github.com/lvcabral/zenfs/issues"
 	},
 	"engines": {
 		"node": ">= 18"
